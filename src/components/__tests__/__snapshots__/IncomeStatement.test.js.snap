@@ -1,0 +1,398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Financial Statement Component check if component component match the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-1/2 px-2 mb-4"
+      >
+        <div
+          class="bg-red-500 rounded-lg shadow-lg overflow-hidden"
+        >
+          <div
+            class="flex flex-col p-5 items-center"
+          >
+            <h3
+              class="text-2xl font-bold text-gray-900 mb-2"
+            >
+              ABC
+            </h3>
+            <button
+              class="px-2 py-2 font-semibold rounded shadow-lg bg-red-700 text-gray-300 text-xl"
+            >
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-1/2 px-2 mb-4"
+    >
+      <div
+        class="bg-red-500 rounded-lg shadow-lg overflow-hidden"
+      >
+        <div
+          class="flex flex-col p-5 items-center"
+        >
+          <h3
+            class="text-2xl font-bold text-gray-900 mb-2"
+          >
+            ABC
+          </h3>
+          <button
+            class="px-2 py-2 font-semibold rounded shadow-lg bg-red-700 text-gray-300 text-xl"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Test Income Statement Component check if component component match the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-full px-2 mb-4"
+      >
+        <div
+          class="bg-red-500 rounded-lg shadow-lg overflow-hidden"
+        >
+          <div
+            class="flex  p-3"
+          >
+            <h3
+              class="text-2xl font-bold text-gray-900 mb-2"
+            >
+              2022
+            </h3>
+            <div
+              class="flex flex-col p-3 "
+            >
+              <h4
+                class="text-l font-bold text-gray-900 mb-2"
+              >
+                Operating Expenses:
+                <span
+                  class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+                >
+                  $10,000.00
+                </span>
+              </h4>
+              <h4
+                class="text-l font-bold text-gray-900 mb-2"
+              >
+                Operating Income:
+                <span
+                  class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+                >
+                  $20,000.00
+                </span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-full px-2 mb-4"
+    >
+      <div
+        class="bg-red-500 rounded-lg shadow-lg overflow-hidden"
+      >
+        <div
+          class="flex  p-3"
+        >
+          <h3
+            class="text-2xl font-bold text-gray-900 mb-2"
+          >
+            2022
+          </h3>
+          <div
+            class="flex flex-col p-3 "
+          >
+            <h4
+              class="text-l font-bold text-gray-900 mb-2"
+            >
+              Operating Expenses:
+              <span
+                class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+              >
+                $10,000.00
+              </span>
+            </h4>
+            <h4
+              class="text-l font-bold text-gray-900 mb-2"
+            >
+              Operating Income:
+              <span
+                class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+              >
+                $20,000.00
+              </span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Test Income Statement Component check if component component match the snapshot 2`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-full px-2 mb-4"
+      >
+        <div
+          class="bg-red-500 rounded-lg shadow-lg overflow-hidden"
+        >
+          <div
+            class="flex  p-3"
+          >
+            <h3
+              class="text-2xl font-bold text-gray-900 mb-2"
+            >
+              2022
+            </h3>
+            <div
+              class="flex flex-col p-3 "
+            >
+              <h4
+                class="text-l font-bold text-gray-900 mb-2"
+              >
+                Operating Expenses:
+                <span
+                  class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+                >
+                  $10,000.00
+                </span>
+              </h4>
+              <h4
+                class="text-l font-bold text-gray-900 mb-2"
+              >
+                Operating Income:
+                <span
+                  class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+                >
+                  $20,000.00
+                </span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-full px-2 mb-4"
+    >
+      <div
+        class="bg-red-500 rounded-lg shadow-lg overflow-hidden"
+      >
+        <div
+          class="flex  p-3"
+        >
+          <h3
+            class="text-2xl font-bold text-gray-900 mb-2"
+          >
+            2022
+          </h3>
+          <div
+            class="flex flex-col p-3 "
+          >
+            <h4
+              class="text-l font-bold text-gray-900 mb-2"
+            >
+              Operating Expenses:
+              <span
+                class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+              >
+                $10,000.00
+              </span>
+            </h4>
+            <h4
+              class="text-l font-bold text-gray-900 mb-2"
+            >
+              Operating Income:
+              <span
+                class="px-2 py-1 font-semibold rounded-full bg-red-600 text-white"
+              >
+                $20,000.00
+              </span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
