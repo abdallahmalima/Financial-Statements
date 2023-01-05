@@ -1,8 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import books from './books/booksSlice';
-import categories from './categories/categoriesSlice';
+import financialStatements from './financial-statements/financialStatementSlice';
 
-const rootReducer = combineReducers({ books, categories });
+const rootReducer = combineReducers({ financialStatements });
 
 const store = configureStore({ reducer: rootReducer });
 

@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import Book from '../Book';
+import Book from '../FinancialStatement';
 import store from '../../redux/configureStore';
 
 describe('Book component', () => {

@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import BookPage from './Pages/BookPage';
-import CategoryPage from './Pages/CategoryPage';
+import IncomeStatementList from './components/IncomeStatementList';
+import FinancialStatementList from './components/FinancialStatementList';
 
 const App = () => (
-  <div className="w-full h-full font-montserrat  bg-dirty-white">
+  <div className="w-full h-full font-montserrat  bg-red-400">
      <NavBar/>
      <Routes>
-       <Route path="/" element={<BookPage/>}/>
-       <Route path="/categories" element={<CategoryPage/>}/>
+       <Route path="/" element={<FinancialStatementList />}/>
+       <Route path="/:symbol" element={<IncomeStatementList/>}/>
      </Routes>
   </div>
 );
