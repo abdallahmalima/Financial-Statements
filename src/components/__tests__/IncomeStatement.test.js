@@ -19,7 +19,7 @@ describe('Test Income Statement Component', () => {
     expect(incomeStatementRender).toMatchSnapshot();
   });
 
-  it('check if component component match the snapshot', () => {
+  it('render income statement component', () => {
     const incomeStatement = {
       calendarYear: '2022',
       operatingExpenses: 10000,
