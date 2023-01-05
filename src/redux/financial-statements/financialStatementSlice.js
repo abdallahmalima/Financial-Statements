@@ -1,22 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchFinancialStatements, fetchIncomeStatements } from './financialStatementThunk';
 
-const initialState = {
+export const initialState = {
   financialStatements: [],
   incomeStatements: [],
   loading: true,
   error: null,
-  deletedError: null,
 };
 
 const financialStatementsSlice = createSlice({
   name: 'financialStatements',
   initialState,
-  reducers: {
-    resetDeletedError(state) {
-      state.deletedError = null;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchFinancialStatements.pending, (state) => {
       state.error = null;
@@ -51,7 +46,4 @@ const financialStatementsSlice = createSlice({
   },
 });
 
-export const {
-  resetDeletedError,
-} = financialStatementsSlice.actions;
 export default financialStatementsSlice.reducer;

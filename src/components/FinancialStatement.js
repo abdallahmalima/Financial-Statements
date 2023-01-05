@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { fetchIncomeStatements } from '../redux/financial-statements/financialStatementThunk';
 
 const FinancialStatement = ({
   symbol,
 }) => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const showIncomeStatements = () => {
-    // dispatch(fetchIncomeStatements(symbol));
     navigate(`/${symbol}`);
   };
   return (
@@ -28,7 +24,7 @@ const FinancialStatement = ({
 };
 
 FinancialStatement.propTypes = {
-  stringArray: PropTypes.arrayOf(PropTypes.string).isRequired,
+  symbol: PropTypes.string.isRequired,
 };
 
 export default FinancialStatement;
