@@ -1,4 +1,4 @@
-import financialStatementsReducer, { initialState } from '../../redux/financial-statements/financialStatementSlice';
+import financialStatementsReducer, { initialState } from '../financial-statements/financialStatementSlice';
 import { fetchFinancialStatements } from '../financial-statements/financialStatementThunk';
 
 describe('financial statements slice', () => {
@@ -10,8 +10,6 @@ describe('financial statements slice', () => {
       error: null,
     });
   });
-
-
 
   it('should handle the fetchFinancialStatements.pending action', () => {
     const state = {
@@ -49,10 +47,9 @@ describe('financial statements slice', () => {
       error: null,
     };
 
-   
-    const payload = [{ calendarYear: '2022',operatingExpenses: 10000,operatingIncome: 20000},
-                    { calendarYear: '2021',operatingExpenses: 90000,operatingIncome: 30000},
-                    { calendarYear: '2020',operatingExpenses: 80000,operatingIncome: 70000},];
+    const payload = [{ calendarYear: '2022', operatingExpenses: 10000, operatingIncome: 20000 },
+      { calendarYear: '2021', operatingExpenses: 90000, operatingIncome: 30000 },
+      { calendarYear: '2020', operatingExpenses: 80000, operatingIncome: 70000 }];
     const newState = financialStatementsReducer(state, fetchFinancialStatements.fulfilled(payload));
     expect(newState).toEqual({
       financialStatements: payload,
@@ -61,5 +58,4 @@ describe('financial statements slice', () => {
       error: null,
     });
   });
-
 });

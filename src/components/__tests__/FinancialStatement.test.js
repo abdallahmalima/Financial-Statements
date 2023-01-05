@@ -9,7 +9,7 @@ describe('Test Financial Statement Component', () => {
     const financialStatementRender = render(
         <Router>
         <FinancialStatement symbol={symbol} />
-        </Router>
+        </Router>,
     );
 
     expect(financialStatementRender).toMatchSnapshot();
@@ -20,11 +20,11 @@ describe('Test Financial Statement Component', () => {
     const { getByText } = render(
       <Router>
        <FinancialStatement symbol={symbol} />
-    </Router>
+    </Router>,
     );
     const textSymbol = getByText(/ABC/i);
     const buttonElement = getByText(/view more/i);
-  
+
     expect(buttonElement).toBeInTheDocument();
     expect(textSymbol).toBeInTheDocument();
   });
