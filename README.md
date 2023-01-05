@@ -30,6 +30,9 @@
 
 **Financial-Statements**  app helps users to familiarize themselves with financial statements and stock information for various companies. Additionally, it provides a convenient way for individuals to stay informed about the financial health and performance of different businesses.
 
+## Design
+
+- I appreciate work done by  Nelson Sakwa  design on [Behance](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29) as the creater of original mockup design.
 
 ## 🛠 Built With <a name="built-with"></a>
 
