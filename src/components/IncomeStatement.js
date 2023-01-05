@@ -19,7 +19,11 @@ const IncomeStatement = ({
 );
 
 IncomeStatement.propTypes = {
-  stringArray: PropTypes.arrayOf(PropTypes.string).isRequired,
+  incomeStatement: PropTypes.shape({
+    calendarYear: PropTypes.string.isRequired,
+    operatingExpenses: PropTypes.number.isRequired,
+    operatingIncome: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default IncomeStatement;
