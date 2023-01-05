@@ -25,10 +25,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Bookstore <a name="about-project"></a>
+# 📖 Financial-Statements <a name="about-project"></a>
 
 
-**Bookstore** is a website for all people loves books. It is a Single Page App (SPA) that allows users to: Create,Update,Delete and see list of books
+**Financial-Statements**  app helps users to familiarize themselves with financial statements and stock information for various companies. Additionally, it provides a convenient way for individuals to stay informed about the financial health and performance of different businesses.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -90,7 +90,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:abdallahmalima/Bookstore.git
+  git clone git@github.com:abdallahmalima/Financial-Statements.git
 ```
 
 
@@ -157,10 +157,10 @@ You can deploy this project using:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Add functionality for comments**
-- [ ] **Add functionality for update book**
-- [ ] **Add toaster message when create book**
-- [ ] **Add loading progress bar on fetching data from the server**
+- [ ] **Add Details page when User click Income Statement of a specific year**
+- [ ] **Add Print Option on both financial and income statements**
+- [ ] **Add Export to csv,excel pdf on both financial and income statements**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,7 +170,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abdallahmalima/Bookstore/issues).
+Feel free to check the [issues page](https://github.com/abdallahmalima/Financial-Statements/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,7 +199,7 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/abdallahmalima/Bookstore/blob/dev/MIT.md) licensed.
+This project is [MIT](https://github.com/abdallahmalima/Financial-Statements/blob/dev/README.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
