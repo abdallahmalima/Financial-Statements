@@ -46,4 +46,5 @@ const financialStatementsSlice = createSlice({
   },
 });
 
+export const allStatements = (state) => state.financialStatements;
 export default financialStatementsSlice.reducer;
