@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { allStatements } from '../redux/financial-statements/financialStatementSlice';
 import { fetchIncomeStatements } from '../redux/financial-statements/financialStatementThunk';
 import currencyFormatter from '../utils/currencyFormatter';
 import IncomeStatement from './IncomeStatement';
 import useFilter from './useFilter';
 
 const IncomeStatementList = () => {
-  const { incomeStatements, error, loading } = useSelector((state) => state.financialStatements);
+  const { incomeStatements, error, loading } = useSelector(allStatements);
   const [filter, setFilter] = useState('');
   const { symbol } = useParams();
   const filteredStatements = useFilter(filter, 'calendarYear');
@@ -35,8 +36,8 @@ const IncomeStatementList = () => {
       </div>
     </div>
   <div className="flex flex-wrap bg-red-400 -mx-2 px-3">
-    {loading && <h3 className="bg-red-500 p-7 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto">Loading...</h3>}
-    {error && <h3 className="bg-red-500 p-7 w-80 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto">{error}</h3>}
+    {loading && <h3 className="bg-red-500 p-7 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto text-center">Loading...</h3>}
+    {error && <h3 className="bg-red-500 p-7 w-80 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto text-center">{error}</h3>}
     {!loading && !error && (incomeStatements.length === 0) && <h3 className="textError">No Financial Statement Symbol Found</h3>}
     {!loading && !error && filteredStatements(incomeStatements)
       .map((incomeStatement, index) => (
