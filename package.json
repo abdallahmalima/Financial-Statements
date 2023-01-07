@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
     "big.js": "^6.2.1",
+    "immer": "^9.0.17",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",

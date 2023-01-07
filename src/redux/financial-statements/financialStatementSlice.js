@@ -4,6 +4,7 @@ import { fetchFinancialStatements, fetchIncomeStatements } from './financialStat
 export const initialState = {
   financialStatements: [],
   incomeStatements: [],
+  incomeStatementsCache: [],
   loading: true,
   error: null,
 };
@@ -39,8 +40,10 @@ const financialStatementsSlice = createSlice({
     });
 
     builder.addCase(fetchIncomeStatements.fulfilled, (state, action) => {
+      const { symbol, incomeStatements } = action.payload;
       state.error = null;
-      state.incomeStatements = action.payload;
+      state.incomeStatements = incomeStatements;
+      state.incomeStatementsCache.push(action.payload);
       state.loading = false;
     });
   },
