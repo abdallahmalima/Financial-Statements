@@ -8,20 +8,30 @@ import IncomeStatement from './IncomeStatement';
 import useFilter from './useFilter';
 
 const IncomeStatementList = () => {
-  const { incomeStatements, error, loading } = useSelector(allStatements);
+  const {
+    incomeStatements, incomeStatementsCache, error, loading,
+  } = useSelector(allStatements);
   const [filter, setFilter] = useState('');
   const { symbol } = useParams();
   const filteredStatements = useFilter(filter, 'calendarYear');
 
+  const incomeStatementsC = incomeStatementsCache
+    .find((incomeStatementC) => incomeStatementC.symbol === symbol);
+
+  const statements = (!incomeStatementsC) ? incomeStatements : incomeStatementsC.incomeStatements;
+
   const getAvg = (key) => {
-    const statements = filteredStatements(incomeStatements);
-    if (statements.length === 0) return 0;
-    return statements.reduce((acc, statement) => acc + statement[key], 0) / statements.length;
+    const allfilteredStatements = filteredStatements(statements);
+    if (allfilteredStatements.length === 0) return 0;
+    return allfilteredStatements
+      .reduce((acc, statement) => acc + statement[key], 0) / allfilteredStatements.length;
   };
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchIncomeStatements(symbol));
+    if (!incomeStatementsC) {
+      dispatch(fetchIncomeStatements(symbol));
+    }
   }, []);
 
   return <>
@@ -38,8 +48,8 @@ const IncomeStatementList = () => {
   <div className="flex flex-wrap bg-red-400 -mx-2 px-3">
     {loading && <h3 className="bg-red-500 p-7 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto text-center">Loading...</h3>}
     {error && <h3 className="bg-red-500 p-7 w-80 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto text-center">{error}</h3>}
-    {!loading && !error && (incomeStatements.length === 0) && <h3 className="textError">No Financial Statement Symbol Found</h3>}
-    {!loading && !error && filteredStatements(incomeStatements)
+    {!loading && !error && (statements.length === 0) && <h3 className="textError">No Financial Statement Symbol Found</h3>}
+    {!loading && !error && filteredStatements(statements)
       .map((incomeStatement, index) => (
        <IncomeStatement key={index} incomeStatement={incomeStatement} />
 

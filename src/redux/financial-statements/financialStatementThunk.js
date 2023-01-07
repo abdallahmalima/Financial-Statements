@@ -16,7 +16,9 @@ export const fetchFinancialStatements = createAsyncThunk(FINANCIAL_STATEMENT_FET
 });
 
 function getFinancialData(arr) {
-  return arr.map(({ calendarYear, operatingExpenses, operatingIncome }) => ({
+  return arr.map(({
+    calendarYear, operatingExpenses, operatingIncome,
+  }) => ({
     calendarYear,
     operatingExpenses,
     operatingIncome,
@@ -25,5 +27,5 @@ function getFinancialData(arr) {
 
 export const fetchIncomeStatements = createAsyncThunk(INCOME_STATEMENT_FETCHED, async (symbol) => {
   const res = await axios.get(`${BASE_URL}/income-statement/${symbol}?limit=120&apikey=6fa27f3bc0cb29bdcb06d98d2091d91a`);
-  return getFinancialData(res.data);
+  return { symbol, incomeStatements: getFinancialData(res.data) };
 });
