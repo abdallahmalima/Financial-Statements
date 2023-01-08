@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { allStatements } from '../redux/financial-statements/financialStatementSlice';
 import { fetchIncomeStatements } from '../redux/financial-statements/financialStatementThunk';
 import currencyFormatter from '../utils/currencyFormatter';
 import IncomeStatement from './IncomeStatement';
+import useDebounce from './useDebounce';
 import useFilter from './useFilter';
 
 const IncomeStatementList = () => {
@@ -17,11 +18,17 @@ const IncomeStatementList = () => {
 
   const incomeStatementsC = incomeStatementsCache
     .find((incomeStatementC) => incomeStatementC.symbol === symbol);
-
+//this line decide wheter to use data from server or from cache
   const statements = (!incomeStatementsC) ? incomeStatements : incomeStatementsC.incomeStatements;
 
+  const debouncedFilter = useDebounce(filter, 500);
+  const filteredIncomeStatements = useMemo(
+    () => filteredStatements(statements),
+    [debouncedFilter, statements],
+  );
+
   const getAvg = (key) => {
-    const allfilteredStatements = filteredStatements(statements);
+    const allfilteredStatements = filteredIncomeStatements;
     if (allfilteredStatements.length === 0) return 0;
     return allfilteredStatements
       .reduce((acc, statement) => acc + statement[key], 0) / allfilteredStatements.length;
@@ -29,14 +36,11 @@ const IncomeStatementList = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
+    //if data found in cache do not fetch from server
     if (!incomeStatementsC) {
       dispatch(fetchIncomeStatements(symbol));
     }
   }, []);
-
-  const debouncedFilter = useDebounce(filter, 500);
-  const filteredIncomeStatements = useMemo(() => filteredStatements(statements), [debouncedFilter, statements]);
-  console.log(filteredIncomeStatements);
 
   return <>
    <div className="w-full px-2 mb-4">
@@ -53,7 +57,7 @@ const IncomeStatementList = () => {
     {loading && <h3 className="bg-red-500 p-7 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto text-center">Loading...</h3>}
     {error && <h3 className="bg-red-500 p-7 w-80 text-2xl rounded-3xl shadow-lg overflow-hidden m-auto text-center">{error}</h3>}
     {!loading && !error && (statements.length === 0) && <h3 className="textError">No Financial Statement Symbol Found</h3>}
-    {!loading && !error && filteredStatements(statements)
+    {!loading && !error && filteredIncomeStatements
       .map((incomeStatement, index) => (
        <IncomeStatement key={index} incomeStatement={incomeStatement} />
 
