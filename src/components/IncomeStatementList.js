@@ -34,6 +34,10 @@ const IncomeStatementList = () => {
     }
   }, []);
 
+  const debouncedFilter = useDebounce(filter, 500);
+  const filteredIncomeStatements = useMemo(() => filteredStatements(statements), [debouncedFilter, statements]);
+  console.log(filteredIncomeStatements);
+
   return <>
    <div className="w-full px-2 mb-4">
       <div className="bg-red-400 rounded-lg shadow-lg overflow-hidden">
